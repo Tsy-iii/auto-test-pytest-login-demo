@@ -1,29 +1,46 @@
-project_root/
-├── conftest.py               # Pytest 配置，如 fixture 定义
-├── requirements.txt          # 所需库（如 selenium、pytest、allure-pytest）
-├── pages/
-│   └── login_page.py         # 页面对象模型（封装登录页面操作）
-├── tests/
-│   ├── test_login_success.py # 登录成功测试用例
-│   └── test_login_fail.py    # 登录失败测试用例
-├── utils/
-│   └── config.py             # 存放配置，如账号密码等
-└── README.md                 # 项目说明文档
+# 🧪 Auto Test Project: Pytest + Selenium Login Demo
 
-# README.md
-# SauceDemo Pytest + Page Object 自动化测试项目
+This is a demo project for automated UI login testing using **Selenium**, **Pytest**, and **Page Object Model** architecture.  
+The test cases are designed for [https://www.saucedemo.com/](https://www.saucedemo.com/) and can be used as a reference for beginners or job interview portfolios.
 
-## 说明
-基于 pytest + selenium + page object 封装的自动化测试项目。
+---
 
-测试站点：[https://www.saucedemo.com](https://www.saucedemo.com)
+## ✅ Features
 
-## 运行方式
-1. 安装依赖：`pip install -r requirements.txt`
-2. 运行测试：`pytest tests/`
-3. 生成报告：`pytest --alluredir=./allure-results`
-4. 打开报告：`allure serve ./allure-results`
+- Page Object Model structure
+- Pytest test framework
+- Allure report support
+- Valid login test
+- Invalid login scenarios (empty username/password, locked user, etc.)
+- Parameterized tests
 
-## 测试用例
-- 登录成功
-- 登录失败（错误账号）
+---
+
+## 🧰 Tech Stack
+
+- Python 3.10
+- Selenium
+- Pytest
+- Allure-pytest
+- Git & GitHub
+
+---
+
+## 📷 Allure Report Preview
+
+<img src="screenshots/allure-sample.png" width="800"/>
+
+> You can generate the Allure report locally using:
+>
+> ```bash
+> pytest --alluredir=allure-results
+> allure serve allure-results
+> ```
+
+---
+
+## 🔧 How to Run
+
+```bash
+pip install -r requirements.txt
+pytest --alluredir=allure-results
