@@ -16,13 +16,15 @@
 ---
 
 ## 🗂 项目结构
+
+```text
 AutoTestFramework/
 ├── pages/                     # 页面对象封装层（PO 模式）
 │   ├── login_page.py
 │   ├── inventory_page.py
 │   ├── cart_page.py
 │   ├── checkout_page.py
-│   └── checkout_overview_page.py
+│   ├── checkout_overview_page.py
 │   └── checkout_complete_page.py
 │
 ├── tests/                     # 测试用例层
@@ -44,8 +46,7 @@ AutoTestFramework/
 ├── README.md                  # 项目说明文档（你正在看的）
 ├── screenshots/               # 失败截图输出目录
 └── allure-results/            # Allure 报告结果目录
-
----
+```
 
 ## 🚀 快速开始
 
