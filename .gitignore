@@ -26,3 +26,6 @@ allure-results/
 # pytest cache
 .cache/
 .pytest_cache/
+
+# 忽略截图文件
+screenshots/

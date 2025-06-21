@@ -59,3 +59,9 @@ class CheckoutPage:
         获取成功下单页面的确认消息文本（用来断言）
         """
         return self.driver.find_element(By.CLASS_NAME, "complete-header").text
+    
+    def get_error_message(self):
+        """
+        获取失败下单页面的错误消息文本（用来断言）
+        """
+        return self.driver.find_element(By.CLASS_NAME, "error-message-container").text
