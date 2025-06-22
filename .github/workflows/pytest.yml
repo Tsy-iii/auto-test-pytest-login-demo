@@ -11,27 +11,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4  # ✅ 已升级为 v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5  # ✅ 最新稳定版本
       with:
         python-version: '3.10'
 
-    - name: Install dependencies
+    - name: 📦 Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         sudo apt install -y unzip
         pip install allure-pytest
 
-    - name: Run Pytest with Allure
+    - name: ▶️ Run Pytest with Allure
       run: |
         pytest --alluredir=allure-results
 
-    - name: Upload Allure Results
-      uses: actions/upload-artifact@v3
+    - name: 📤 Upload Allure Results
+      uses: actions/upload-artifact@v4  # ✅ 替换为 v4
       with:
         name: allure-results
         path: allure-results/
